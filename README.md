@@ -1,9 +1,14 @@
+<p align="center">
+  <img src="./logo.svg" width="200" alt="ByteEnum Logo" />
+</p>
+
 # ByteEnum
 
 A high-performance, memory-optimized enum implementation for TypeScript with robust utility methods.
 
-[![npm version](https://img.shields.io/npm/v/byte-enum.svg)](https://www.npmjs.com/package/byte-enum)
+[![npm version](https://img.shields.io/npm/v/@andrewdonelson/byte-enum.svg)](https://www.npmjs.com/package/@andrewdonelson/byte-enum)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Test Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/AndrewDonelson/byte-enum)
 
 ## Table of Contents
 
@@ -53,9 +58,9 @@ The implementation uses optimized data structures (Map and pre-computed arrays) 
 ## Installation
 
 ```bash
-npm install byte-enum
+npm install @andrewdonelson/byte-enum
 # or
-yarn add byte-enum
+yarn add @andrewdonelson/byte-enum
 ```
 
 ## Pros & Cons
@@ -82,7 +87,7 @@ yarn add byte-enum
 ### Creating Enums
 
 ```typescript
-import { createByteEnum, createCharEnum, createAlphaNumEnum, ByteEnumValue } from 'byte-enum';
+import { createByteEnum, createCharEnum, createAlphaNumEnum, TinyEnumValue } from '@andrewdonelson/byte-enum';
 
 // Using byte values (0, 1, 2, etc.)
 export const BodyType = createByteEnum([
@@ -95,7 +100,7 @@ export const BodyType = createByteEnum([
 ] as const);
 
 // Get the type for TypeScript
-export type BodyTypeValue = ByteEnumValue<typeof BodyType>;
+export type BodyTypeValue = TinyEnumValue<typeof BodyType>;
 
 // Using character values (single characters)
 export const Status = createCharEnum([
@@ -299,7 +304,7 @@ ByteEnum is optimized for both memory usage and lookup performance. Here's how i
 ### User Profile System
 
 ```typescript
-import { createByteEnum, createCharEnum, ByteEnumValue } from 'byte-enum';
+import { createByteEnum, createCharEnum, TinyEnumValue } from '@andrewdonelson/byte-enum';
 
 // Define gender enum
 const Gender = createByteEnum([
@@ -309,7 +314,7 @@ const Gender = createByteEnum([
   'OTHER',
   'PREFER_NOT_TO_SAY'
 ] as const);
-type GenderValue = ByteEnumValue<typeof Gender>;
+type GenderValue = TinyEnumValue<typeof Gender>;
 
 // Define account status enum
 const AccountStatus = createCharEnum([
@@ -318,7 +323,7 @@ const AccountStatus = createCharEnum([
   'PENDING_VERIFICATION',
   'CLOSED'
 ] as const);
-type AccountStatusValue = ByteEnumValue<typeof AccountStatus>;
+type AccountStatusValue = TinyEnumValue<typeof AccountStatus>;
 
 // Define user interface
 interface User {
@@ -367,7 +372,7 @@ function getGenderOptions() {
 ### Order Processing System
 
 ```typescript
-import { createCharEnum, ByteEnumValue } from 'byte-enum';
+import { createCharEnum, TinyEnumValue } from '@andrewdonelson/byte-enum';
 
 // Define order status with custom characters
 const OrderStatus = createCharEnum([
@@ -379,7 +384,7 @@ const OrderStatus = createCharEnum([
   'RETURNED',
   'REFUNDED'
 ], 'PSDCXRF'); // Meaningful character codes
-type OrderStatusValue = ByteEnumValue<typeof OrderStatus>;
+type OrderStatusValue = TinyEnumValue<typeof OrderStatus>;
 
 // Define permitted status transitions
 const allowedTransitions: Record<OrderStatusValue, OrderStatusValue[]> = {
