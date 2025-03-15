@@ -1,0 +1,41 @@
+{
+  "name": "@andrewdonelson/byte-enum",
+  "version": "1.0.0",
+  "description": "A high-performance, memory-optimized enum implementation for TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "enum",
+    "typescript",
+    "memory-efficient",
+    "performance",
+    "byte",
+    "utility"
+  ],
+  "author": "Andrew Donelson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewDonelson/byte-enum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AndrewDonelson/byte-enum/issues"
+  },
+  "homepage": "https://github.com/AndrewDonelson/byte-enum#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  }
+}

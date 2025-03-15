@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" rx="50" ry="50" fill="#f5f7fa" />
+  
+  <!-- Main byte symbol container -->
+  <rect x="80" y="80" width="240" height="200" rx="30" ry="30" fill="#4a6cf7" />
+  
+  <!-- Byte dots/circles representing binary data -->
+  <circle cx="110" cy="120" r="12" fill="white" />
+  <circle cx="150" cy="120" r="12" fill="white" />
+  <circle cx="190" cy="120" r="12" fill="white" opacity="0.5" />
+  <circle cx="230" cy="120" r="12" fill="white" />
+  <circle cx="270" cy="120" r="12" fill="white" opacity="0.5" />
+  
+  <circle cx="110" cy="160" r="12" fill="white" opacity="0.5" />
+  <circle cx="150" cy="160" r="12" fill="white" />
+  <circle cx="190" cy="160" r="12" fill="white" opacity="0.5" />
+  <circle cx="230" cy="160" r="12" fill="white" />
+  <circle cx="270" cy="160" r="12" fill="white" />
+  
+  <circle cx="110" cy="200" r="12" fill="white" />
+  <circle cx="150" cy="200" r="12" fill="white" opacity="0.5" />
+  <circle cx="190" cy="200" r="12" fill="white" />
+  <circle cx="230" cy="200" r="12" fill="white" opacity="0.5" />
+  <circle cx="270" cy="200" r="12" fill="white" />
+  
+  <!-- Enum representation (brackets) -->
+  <path d="M 80,240 L 80,300 L 130,300" stroke="#3d5af1" stroke-width="15" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 320,240 L 320,300 L 270,300" stroke="#3d5af1" stroke-width="15" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Text "ByteEnum" -->
+  <text x="200" y="350" font-family="Arial, sans-serif" font-weight="bold" font-size="36" text-anchor="middle" fill="#2d3748">ByteEnum</text>
+</svg>
